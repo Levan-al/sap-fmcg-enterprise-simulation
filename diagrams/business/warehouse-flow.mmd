@@ -1,0 +1,12 @@
+flowchart TD
+    A[Goods Receipt\nMIGO] --> B[Stock Overview\nMMBE / MB52]
+    B --> C[Movement Control\nz_movement_control]
+    C --> D[Automatic Transfer\nz_auto_transfers]
+    D --> E[Stock Visibility\nz_stock_visibility]
+    E --> F[Error Detection\nz_error_detection]
+    F --> G[Warehouse Analytics\nz_warehouse_analytics]
+    G --> H[Delivery Preparation\nVL01N]
+
+    style A fill:#e8f5e9
+    style E fill:#fff3e0
+    style G fill:#f3e5f5
