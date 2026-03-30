@@ -1,0 +1,13 @@
+flowchart TD
+    A[Sales Order\nVA01] --> B[Outbound Delivery\nVL01N]
+    B --> C[Picking & Packing]
+    C --> D[Post Goods Issue\nVL02N]
+    D --> E[Billing\nVF01]
+    E --> F[Incoming Payment\nF-28]
+    F --> G[FI-AR Reconciliation\nz_mm_fi_sync]
+
+    style A fill:#fce4ec
+    style B fill:#f8bbd0
+    style D fill:#e8f5e9
+    style E fill:#f3e5f5
+    style F fill:#e0f2f1
