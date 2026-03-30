@@ -1,0 +1,33 @@
+flowchart TD
+    subgraph "Procurement (MM)"
+        A[ME21N - Purchase Order] --> B[ME51N - Purchase Requisition]
+    end
+
+    subgraph "Warehouse & Goods Receipt (WM)"
+        B --> C[MIGO - Goods Receipt]
+        C --> D[MB52 - Stock Overview\nMMBE - Stock Overview]
+    end
+
+    subgraph "Production (PP)"
+        D --> E[CO01 - Production Order\nCS01 - BOM]
+    end
+
+    subgraph "Sales & Delivery (SD)"
+        E --> F[VA01 - Sales Order]
+        F --> G[VL01N - Outbound Delivery]
+    end
+
+    subgraph "Billing"
+        G --> H[VF01 - Create Invoice]
+    end
+
+    subgraph "Finance (FI)"
+        H --> I[MIRO - Vendor Invoice\nF-28 - Incoming Payment]
+    end
+
+    style A fill:#e3f2fd
+    style C fill:#e8f5e9
+    style E fill:#fff3e0
+    style F fill:#fce4ec
+    style H fill:#f3e5f5
+    style I fill:#e0f2f1
