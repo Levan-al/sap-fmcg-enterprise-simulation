@@ -1,10 +1,18 @@
-# Tools Folder
+# Tools & Templates
 
-This folder contains useful templates and helper files for the project.
+Useful templates and utilities for the SAP FMCG Simulation project.
 
-Content:
-- transport-template.txt → Transport request template for SAP
-- role-template.txt → Authorization role template
-- Other useful scripts or configuration files
+## Available Templates
 
-Goal: Make it easier to deploy and manage the project in a real SAP system.
+- `transport-template.txt` → Standard template for transport request description
+- `role-template.txt` → PFCG role creation and authorization template
+- `checklist-senior-review.md` → Checklist for senior developer review
+- `test-data-setup.md` → Step-by-step guide for setting up test data
+
+## Purpose
+- Standardize documentation and processes
+- Speed up project setup and maintenance
+- Help during transport and go-live preparation
+- Facilitate knowledge transfer
+
+This folder makes the project more production-like and professional.
