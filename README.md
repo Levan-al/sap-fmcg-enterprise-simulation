@@ -1,71 +1,72 @@
 # SAP FMCG Enterprise Process Simulation
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![SAP](https://img.shields.io/badge/SAP-ABAP%20%7C%20RAP%20%7C%20CDS-blue)
 
-## 🎯 Project Goal
+## 🎯 Goal
 
-Realistic **end-to-end SAP simulation** of an FMCG distribution company in a training environment (Client 500).
+Realistic **end-to-end SAP simulation** of an FMCG distribution company in a controlled training environment (Client 500).
 
-The focus is not only on executing transactions, but on understanding **how business processes, architecture, and custom development work together**.
+The project focuses on understanding **how business processes, system architecture, custom development, and integration** work together — not just executing individual transactions.
 
 **Business Scope**: Snacks • Confectionery • Alcoholic Beverages
 
 **Full Cycle**: Procurement → Warehouse → Production → Sales → Delivery → Billing → Finance
 
-## 🚀 Key Features
+## 🚀 Key Achievements
 
-- **7 Modular Z-Reports** with clean TOP/SEL/MAIN structure
-- **Warehouse Automation**: Stock visibility, automatic transfers, movement control, analytics, error detection
-- **MM-FI Reconciliation** and cross-module integration
-- **User Management & Authorization**: 11 users + 11 roles with SoD (Segregation of Duties)
-- **Modern Development**: CDS Views + RAP readiness (Service Definition & Binding)
-- **Rich Documentation**: Architecture, processes, design decisions and Mermaid diagrams
+- **7 Modular Z-Reports** with clean ABAP best practices (TOP/SEL/MAIN structure)
+- **Warehouse Automation**: Stock visibility, movement control, automatic transfers, analytics, error detection & reconciliation
+- **User Management & Security**: 11 test users + 11 roles with proper Segregation of Duties (SoD)
+- **Modern Technologies**: CDS Views + RAP layer (Service Definition, Binding, Behavior with Actions)
+- **Comprehensive Documentation** + Mermaid diagrams + test cases + sample data
 
 ## 🏗️ Architecture Layers
 
-- **Standard SAP** – Core transactions (ME21N, MIGO, VA01, VL01N, MIRO…)
-- **Custom Z-Layer** – 7 warehouse-focused reports with best practices
-- **Analytical Layer** – CDS Views (`Z_I_WAREHOUSE_STOCK`, `Z_I_WAREHOUSE_KPI`)
-- **RAP Layer** – OData V4 services for future Fiori Elements apps
-- **Integration Layer** – MM-FI sync, error detection, reconciliation
+- **Standard SAP** – Core transactions (MM, WM, PP, SD, FI)
+- **Custom Z-Layer** – 7 warehouse-focused reports
+- **Analytical Layer** – CDS Views for stock and KPIs
+- **RAP Layer** – Behavior Definitions, OData services (Fiori readiness)
+- **Integration Layer** – MM-FI sync, SD-WM consistency, error handling
 
 ## 📁 Repository Structure
-
 sap-fmcg-enterprise-simulation/
-├── docs/                    # Detailed documentation (01-08)
-├── diagrams/                # Business, Technical & Security diagrams (Mermaid)
+├── docs/                    # 09 detailed documentation sections
+├── diagrams/                # 8 Mermaid diagrams
 ├── abap/                    # 7 modular Z-reports
-├── rap/                     # CDS Views + Service Definition + Binding
-├── screenshots/             # Visual examples
-├── tests/                   # Test scenarios
-└── data/                    # Sample master & transactional data
+├── rap/                     # CDS + Behavior + Services
+├── data/                    # Master & transactional sample data (CSV)
+├── tests/                   # Unit test cases (including BAPI)
+├── tools/                   # Templates (transport, roles, checklist)
+└── screenshots/             # Visual examples
 
 
-## 📊 Highlights
+## Highlights
 
-- Strong **process thinking** (P2P + OTC cycles)
-- Clean, maintainable ABAP code
-- Real-world integration challenges addressed
+- Strong **process thinking** and real-world integration focus
+- Clean, maintainable, and scalable ABAP code
+- Authorization, SoD, and security concepts implemented
 - Preparation for modern SAP (CDS + RAP)
-- Ready for senior ABAP / SAP consultant discussions
 
-## 🎓 Learning Outcomes
+## Areas for Future Development
 
-- Deep understanding of SAP modules integration
-- When and how to use custom development
-- Authorization, SoD and security concepts
-- Documentation and architecture visualization
+- Full Fiori Elements applications via RAP
+- More screenshots and demo flows
+- Advanced test automation
+- Performance tuning for large data volumes
 
 ---
 
-**Feedback Welcome**  
-I would greatly appreciate your critical review on:
+**Feedback Welcome**
+
+I would greatly appreciate your honest and critical feedback on:
 - Architecture and design decisions
-- Z-code quality and best practices
-- What is missing or over-engineered
-- How to make it even closer to real business usage
+- Quality and best practices of the Z-code
+- Balance between standard vs custom development
+- What is missing or could be improved
+- Overall impression as a showcase / portfolio project
 
-Thank you for your time! 🙌
+No need to be polite — direct feedback is exactly what I'm looking for.
 
-**Last updated**: April 2026
+Thank you in advance for your time!
+
+Levan Alughishvili — April 2026
