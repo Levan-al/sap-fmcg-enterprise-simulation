@@ -1,0 +1,13 @@
+flowchart TD
+    subgraph "User Management"
+        A[Users\nZUSER01 - ZUSER11\nSU01 / SU10]
+    end
+
+    A --> B[Roles\nZ_MM_PURCH, Z_MM_INV_ADV, Z_SD_SALES_ADV ... \nPFCG]
+    B --> C[Authorization Objects\nM_MATE_WRK, M_MATE_BUK ...]
+    C --> D[Segregation of Duties\nSoD Rules]
+    D --> E[Access Control\nRBAC + Client 500]
+
+    style A fill:#e3f2fd
+    style B fill:#bbdefb
+    style D fill:#ffebee
