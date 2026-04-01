@@ -1,0 +1,15 @@
+flowchart TD
+    subgraph "User Input"
+        A[Selection Screen\nPARAMETERS + SELECT-OPTIONS]
+    end
+
+    A --> B[Authorization Check\nAUTHORITY-CHECK]
+    B --> C[Data Fetch\nOpen SQL + CDS Views\nMARD / MSEG]
+    C --> D[Processing Logic\nField-Symbols + Internal Tables\nBusiness Rules]
+    D --> E[Validation & Smart Rules]
+    E --> F[BAPI Posting\nBAPI_GOODSMVT_CREATE\nor direct update]
+    F --> G[Output\nALV Grid / Fiori Elements]
+    G --> H[Logging & Audit\nSLG1 + Custom Log Table]
+
+    style D fill:#fff3e0,stroke:#f57c00
+    style F fill:#e8f5e9,stroke:#388e3c
