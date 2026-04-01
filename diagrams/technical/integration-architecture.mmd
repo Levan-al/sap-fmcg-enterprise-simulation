@@ -1,0 +1,24 @@
+flowchart TD
+    subgraph "MM Layer"
+        A[Material Documents\nMSEG / MKPF]
+    end
+
+    subgraph "WM Layer"
+        B[Warehouse Stock\nMARD]
+    end
+
+    subgraph "SD Layer"
+        C[Deliveries\nLIKP / LIPS]
+    end
+
+    subgraph "FI Layer"
+        D[Accounting Documents\nBKPF / BSEG]
+    end
+
+    A & B --> E[MM-FI Reconciliation\nz_mm_fi_sync]
+    C --> F[SD-WM Integration\nz_delivery_control]
+    E & F --> G[Error Detection\nz_error_detection]
+    G --> H[Analytics Layer\nz_warehouse_analytics + CDS Views]
+
+    style E fill:#fff3e0
+    style G fill:#ffebee
