@@ -1,0 +1,17 @@
+Role Template - PFCG
+
+Role Name: Z_XXXXX
+Description: [e.g. Warehouse Advanced User]
+
+Transactions:
+- MIGO, MB52, MMBE
+- Z_STOCK_VISIBILITY
+- Z_MOVEMENT_CONTROL
+- Z_AUTO_TRANSFERS
+
+Authorization Objects:
+- M_MATE_WRK (Plant)
+- M_MATE_LGO (Storage Location)
+- ACTVT = 03 (Display), 01 (Create), etc.
+
+Notes: SoD compliant - no conflicting authorizations with Finance roles.
