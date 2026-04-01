@@ -1,9 +1,24 @@
-# Data Folder
+# Data
 
-This folder contains sample master data and transactional data for testing the FMCG enterprise simulation.
+Sample master data and transactional data for the SAP FMCG Enterprise Simulation.
 
-Content:
-- master-data/ → Materials, Vendors, Customers, Info Records, etc.
-- transactional-data/ → Example orders, goods movements, production orders, etc.
+## Purpose
+- Enable quick setup and testing of the entire system
+- Provide realistic FMCG data (snacks, confectionery, alcoholic beverages)
+- Support consistent demonstration of Z-reports and processes
+- Serve as reference for data model and integration testing
 
-Goal: Provide ready-to-use data for running end-to-end processes and testing custom developments.
+## Folder Structure
+
+- **master-data/** → Core master records (materials, business partners, etc.)
+- **transactional-data/** → Example documents and movements
+
+## Usage Recommendations
+- Import master data first (MM01, XD01, XK01, CS01)
+- Use transactional data to run full P2P and OTC cycles
+- Combine with test users and roles for complete simulation
+
+## Future Enhancements
+- Excel upload templates
+- LSMW / LTMC templates
+- Test data generation scripts
