@@ -1,19 +1,26 @@
 Transport Request Template
 
-Project: SAP FMCG Enterprise Simulation
-Request Type: [Workbench / Customizing]
-Description: [Short description, e.g. "Add z_auto_transfers report"]
+Project: SAP FMCG Enterprise Process Simulation
+Request Type: Workbench
+Description: [e.g. Add z_auto_transfers with BAPI logic]
 
-Objects included:
+Objects Included:
 - Program: Z_AUTO_TRANSFERS
 - Includes: Z_AUTO_TRANSFERS_TOP, Z_AUTO_TRANSFERS_SEL, Z_AUTO_TRANSFERS_MAIN
 
-Reason: Warehouse automation enhancement
-Tested by: [Your Name]
-Tested on: [Date]
-Impact: Warehouse operations
+Reason:
+Enhanced warehouse automation with automatic stock transfer using BAPI_GOODSMVT_CREATE.
+
+Tested By: [Levan]
+Test Date: [01.04.2026]
+Test Scope: Unit testing + Integration testing completed
+
+Impact:
+- Warehouse operations
+- Stock movement processes
 
 Notes:
-- Modular structure used
-- BAPI_GOODSMVT_CREATE implemented
-- Authorization check included
+- Modular TOP/SEL/MAIN structure applied
+- Authorization check implemented
+- BAPI error handling included
+- ALV output optimized
