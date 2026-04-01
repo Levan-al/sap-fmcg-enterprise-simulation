@@ -1,78 +1,71 @@
-# sap-fmcg-enterprise-simulation
-Realistic end-to-end SAP FMCG distribution system simulation with custom ABAP, CDS Views and enterprise architecture
-# SAP Enterprise Process Simulation
+# SAP FMCG Enterprise Process Simulation
 
-## Goal
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![SAP](https://img.shields.io/badge/SAP-ABAP%20%7C%20RAP%20%7C%20CDS-blue)
 
-Simulate a **realistic SAP-based enterprise system** in a controlled training environment (Client 500).
+## 🎯 Project Goal
 
-The main objective is not only to learn individual SAP modules (MM, SD, PP, FI, WM), but to understand **how business processes, system architecture, and custom development interact** in a real-world FMCG distribution company.
+Realistic **end-to-end SAP simulation** of an FMCG distribution company in a training environment (Client 500).
 
-## Business Scenario
+The focus is not only on executing transactions, but on understanding **how business processes, architecture, and custom development work together**.
 
-FMCG Distribution Company specializing in:
-- Snacks
-- Confectionery
-- Alcoholic beverages
+**Business Scope**: Snacks • Confectionery • Alcoholic Beverages
 
-The system covers the **full end-to-end business cycle**:
-**Procurement → Inventory → Production → Sales → Delivery → Billing → Finance**
+**Full Cycle**: Procurement → Warehouse → Production → Sales → Delivery → Billing → Finance
 
-## Why This Project
+## 🚀 Key Features
 
-Real SAP implementations rarely rely only on standard functionality.  
-This project demonstrates:
-- Where and why standard SAP is not sufficient
-- How to properly extend it with clean, modular ABAP development
-- Modern development practices (CDS Views, RAP readiness)
-- Strong process-level thinking and enterprise architecture
+- **7 Modular Z-Reports** with clean TOP/SEL/MAIN structure
+- **Warehouse Automation**: Stock visibility, automatic transfers, movement control, analytics, error detection
+- **MM-FI Reconciliation** and cross-module integration
+- **User Management & Authorization**: 11 users + 11 roles with SoD (Segregation of Duties)
+- **Modern Development**: CDS Views + RAP readiness (Service Definition & Binding)
+- **Rich Documentation**: Architecture, processes, design decisions and Mermaid diagrams
 
-## Current Status
+## 🏗️ Architecture Layers
 
-**Implemented:**
-- Core MM, WM, PP, SD, FI processes configured
-- Complete master data structure
-- 7 modular Z-reports for warehouse operations (with authorization, logging, ALV)
-- CDS Views for stock overview and warehouse KPIs (turnover, days of supply, ABC classification, slow/dead stock)
-- 11 business roles + 11 test users with proper authorization and SoD simulation
-- Detailed architecture and process documentation with Mermaid diagrams
+- **Standard SAP** – Core transactions (ME21N, MIGO, VA01, VL01N, MIRO…)
+- **Custom Z-Layer** – 7 warehouse-focused reports with best practices
+- **Analytical Layer** – CDS Views (`Z_I_WAREHOUSE_STOCK`, `Z_I_WAREHOUSE_KPI`)
+- **RAP Layer** – OData V4 services for future Fiori Elements apps
+- **Integration Layer** – MM-FI sync, error detection, reconciliation
 
-**In Progress:**
-- RAP / Fiori Elements applications (warehouse dashboard, KPI monitoring)
-- Advanced integration and validation scenarios
+## 📁 Repository Structure
 
-## Architecture Layers
+sap-fmcg-enterprise-simulation/
+├── docs/                    # Detailed documentation (01-08)
+├── diagrams/                # Business, Technical & Security diagrams (Mermaid)
+├── abap/                    # 7 modular Z-reports
+├── rap/                     # CDS Views + Service Definition + Binding
+├── screenshots/             # Visual examples
+├── tests/                   # Test scenarios
+└── data/                    # Sample master & transactional data
 
-- **Standard SAP Layer** – Core transactions and processes
-- **Custom Z-Layer** – Modular ABAP extensions where standard is not enough
-- **CDS / Analytical Layer** – Modern data modeling and KPI calculations
-- **RAP / Fiori Layer** – Modern user interface (planned)
-- **Integration Layer** – Cross-module consistency
 
-## Main Areas Covered
+## 📊 Highlights
 
-- MM / Procurement
-- Warehouse Operations (WM)
-- Production (PP)
-- Sales & Distribution (SD)
-- Finance Integration (FI)
+- Strong **process thinking** (P2P + OTC cycles)
+- Clean, maintainable ABAP code
+- Real-world integration challenges addressed
+- Preparation for modern SAP (CDS + RAP)
+- Ready for senior ABAP / SAP consultant discussions
 
-## Development Highlights
+## 🎓 Learning Outcomes
 
-Custom ABAP tools developed:
-- Stock Visibility Report
-- Goods Movement Control
-- Warehouse Analytics & KPIs
-- Delivery & Billing monitoring
-- Audit trail and error detection
+- Deep understanding of SAP modules integration
+- When and how to use custom development
+- Authorization, SoD and security concepts
+- Documentation and architecture visualization
 
-## Repository Structure
+---
 
-- `docs/` → Business context, architecture and technical documentation
-- `diagrams/` → Visual architecture and process flows (Mermaid)
-- `abap/` → Custom modular Z-development
-- `cds-views/` → CDS Views for stock and analytics
-- `rap/` → RAP services and Fiori readiness
-- `tests/` → Test cases and scenarios
-- `data/` → Sample master and transactional data
-- `screenshots/` → Visual examples
+**Feedback Welcome**  
+I would greatly appreciate your critical review on:
+- Architecture and design decisions
+- Z-code quality and best practices
+- What is missing or over-engineered
+- How to make it even closer to real business usage
+
+Thank you for your time! 🙌
+
+**Last updated**: April 2026
