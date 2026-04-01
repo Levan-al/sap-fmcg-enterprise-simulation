@@ -1,0 +1,27 @@
+flowchart TD
+    subgraph "CDS Layer"
+        A[Z_I_WAREHOUSE_STOCK\nInterface View]
+        B[Z_I_WAREHOUSE_KPI\nAnalytics Cube]
+    end
+
+    subgraph "Behavior Layer"
+        C[Behavior Definition\nzbp_r_stock]
+    end
+
+    subgraph "Service Layer"
+        D[Service Definition\nz_ui_stock_service]
+        E[Service Binding\nOData V4]
+    end
+
+    subgraph "UI Layer"
+        F[Fiori Elements App\nWarehouse Dashboard]
+    end
+
+    A & B --> C
+    C --> D
+    D --> E
+    E --> F
+
+    style A fill:#e8f5e9
+    style B fill:#fff3e0
+    style F fill:#f3e5f5
