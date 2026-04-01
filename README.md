@@ -1,6 +1,7 @@
 # SAP FMCG Enterprise Process Simulation
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![SAP](https://img.shields.io/badge/SAP-ABAP%20%7C%20RAP%20%7C%20CDS-blue)
 
 ## 🎯 Goal
 
